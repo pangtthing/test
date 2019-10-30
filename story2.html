@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+<head>
+	<title>Second</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet">
+	<style type="text/css">
+		body {margin:0px; padding:0px; font-family: 'Noto Serif KR', sans-serif;}
+		body {background:black;}
+
+		#text {color:white; font-size:3em; left:10%; padding-top:130px; padding-bottom: 130px}
+
+		.img {display: block; text-align:center; margin:0px auto; width:40%;}
+		#margin01 {padding-top: 300px}
+		#margin02 {padding-top: 500px}
+		#margin03 {padding-top: 800px}
+
+		.video {display: block; text-align:center; margin:0px auto; width:45%;}
+		#main {width: 100%;}
+		#title {position:relative; text-align:center; padding-bottom:500px; margin:0px; height:100px; background:linear-gradient(to bottom,white 2px,black 105%) }
+		#toon {position:absolute; text-align:center; margin:0px;}
+
+		
+		.circle {position:fixed; width:15px; height:15px; border-radius:50%; border:1px solid white; cursor: pointer;}
+		#prologue {left:40px; bottom:130px;}
+		#story1 {left:40px; bottom:100px}
+		#story2 {left:40px; bottom:70px; background:white}
+		#story3 {left:40px; bottom:40px}
+		#next {width:200px; padding-top:100px; padding-bottom:100px;}
+
+		.black {position:fixed; width:100px; height:50px; background:black}
+
+
+	</style>
+</head>
+<body>
+
+<div class="black"></div>
+
+<div id = "toon">
+		<img src="img/img08.png" class="img" id="margin03">
+		<img src="img/img09.png" class="img" id="margin03">
+		<img src="img/img10.png" class="img">
+		<img src="img/img11.png" class="img">
+		<img src="img/img12.png" class="img" id="margin03">
+		<img src="img/img13.png" class="img" id="margin03">
+		<img src="img/img14.png" class="img" id="margin03">
+		<img src="img/img15.png" class="img" id="margin03">
+
+		<a href="story3.html"><img src="img/next.png" id="next" onmouseover="this.src='img/nextHover.png';" onmouseout="this.src='img/next.png';"></a>
+</div>
+
+
+
+
+
+
+<div>
+	<a href="index.html"><div class="circle" id="prologue"></div></a>
+	<a href="story1.html"><div class="circle" id="story1"></div></a>
+	<a href="story2.html"><div class="circle" id="story2"></div></a>
+	<a href="story3.html"><div class="circle" id="story3"></div></a>
+</div>
+	
+
+
+
+
+
+
+
+	<button id="but">play</button>
+	<script type="text/javascript">
+		var statev1 = false;
+		window.onscroll = function(){
+			var t = document.documentElement.scrollTop + document.body.scrollTop;
+
+			if(statev1 == false){
+				var s = document.getElementsByClassName("video");
+				for(var i=0; i< s.length; i++){
+					s[i].play();
+				}
+				statev1 = true;	
+			}	  
+		}	
+	</script>
+</body>
+</html>
